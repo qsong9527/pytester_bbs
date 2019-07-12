@@ -15,9 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from . import views
+from . import views as bbsviews
+from pywebdriver import views as pyviews
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path(r'bbs/', views.index),
+    # path('$', bbsviews.index),
+    path(r'admin/', admin.site.urls),
+    path(r'bbs/', bbsviews.index),
+    path(r'webdriver/', pyviews.index),
+    path(r'webdriver/location', pyviews.location_practices_page),
+    path(r'webdriver/element', pyviews.element_practices_page),
+    path(r'webdriver/10seconds', pyviews.wait10sec_practices_page),
+    path(r'webdriver/frame', pyviews.frame_practices_page),
 ]
