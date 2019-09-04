@@ -49,7 +49,7 @@ def frame_practices_page_iframe(request):
 
 
 def wait10sec_practices_page(request):
-    random_sleep_time = random.randint(0, 10)
+    random_sleep_time = random.randint(10, 30)
     time.sleep(random_sleep_time)
     __template_page = get_template('10seconds.html')
     __html = __template_page.render({"sleep_sec":random_sleep_time})
