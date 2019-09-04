@@ -30,6 +30,24 @@ def frame_practices_page(request):
     __html = __template_page.render()
     return HttpResponse(__html)
 
+
+def frame_practices_page_frame_func(request):
+    __template_page = get_template('frame_func.html')
+    __html = __template_page.render()
+    return HttpResponse(__html)
+
+
+def frame_practices_page_frame_content(request):
+    __template_page = get_template('frame_content.html')
+    __html = __template_page.render()
+    return HttpResponse(__html)
+
+def frame_practices_page_iframe(request):
+    __template_page = get_template('frame_iframe.html')
+    __html = __template_page.render()
+    return HttpResponse(__html)
+
+
 def wait10sec_practices_page(request):
     random_sleep_time = random.randint(0, 10)
     time.sleep(random_sleep_time)

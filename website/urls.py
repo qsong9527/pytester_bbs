@@ -27,4 +27,7 @@ urlpatterns = [
     path(r'webdriver/element', pyviews.element_practices_page),
     path(r'webdriver/10seconds', pyviews.wait10sec_practices_page),
     path(r'webdriver/frame', pyviews.frame_practices_page),
+    path(r'webdriver/frame_content', pyviews.frame_practices_page_frame_content),
+    path(r'webdriver/frame_func', pyviews.frame_practices_page_frame_func),
+    path(r'webdriver/frame_iframe', pyviews.frame_practices_page_iframe),
 ]
